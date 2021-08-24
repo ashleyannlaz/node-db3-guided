@@ -35,7 +35,8 @@ router.get("/:id", (req, res) => {
 
 router.get("/:id/posts",async (req,res)=>{
   try{
-
+    const posts = await User.getUserPosts(req.params.id)
+    res.json(posts)
   }catch(e){
     res.status(500).json(e.message)
   }
