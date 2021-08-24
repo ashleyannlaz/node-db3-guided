@@ -5,6 +5,6 @@ module.exports = {
         return db("users as u")
             .join("posts as p","p.user_id","u.id")
             .select("p.id","u.username","p.contents")
-            .where("u.id",id)
+            .where("u.id as Philosopher",id)
     }
 }
