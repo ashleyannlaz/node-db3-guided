@@ -33,6 +33,14 @@ router.get("/:id", (req, res) => {
     });
 });
 
+router.get("/:id/posts",async (req,res)=>{
+  try{
+
+  }catch(e){
+    res.status(500).json(e.message)
+  }
+})
+
 router.post("/", (req, res) => {
   const userData = req.body;
 
