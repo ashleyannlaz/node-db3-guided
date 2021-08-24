@@ -1,7 +1,7 @@
 const express = require("express");
 
 const db = require("../../data/db-config.js");
-
+const User = require("./user-model.js")
 const router = express.Router();
 
 router.get("/", (req, res) => {
